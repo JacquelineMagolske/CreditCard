@@ -5,12 +5,13 @@ import java.util.Scanner;
 
 public class TextFile
 	{
-
+		public static ArrayList <Long> cardList = new ArrayList<>();
+		
 		public static void readCards() throws IOException
 		{
 			
 			Scanner myFile = new Scanner(new File("cardNumbers"));
-			ArrayList <Long> cardList = new ArrayList<>();
+			
 			
 			while(myFile.hasNext())
 				{
@@ -18,7 +19,8 @@ public class TextFile
 					long number = Long.parseLong(cardNumber);
 					cardList.add(number);
 				}
-			System.out.println(cardList.size());
+			
+			//System.out.println(cardList.size());
 			
 			
 		}
