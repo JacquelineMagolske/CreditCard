@@ -3,30 +3,37 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class CreditCardMain
+public class UserInput
 	{
 
 		
 		public static void main(String[] args) throws IOException
 			{
 			
-				TextFile.readCards();
-				doubleAlternates(); //do the math in here
+				System.out.println("Please input a 16 digit number");
+				Scanner scanner = new Scanner(System.in);
+				Long cardNumber = scanner.nextLong();
+				
+				
+				if(doubleAlternates(cardNumber))
+					{
+						
+					}
 				
 				
 			}
 		
-		public static void doubleAlternates()
+		public static void doubleAlternates(Long cardNumber)
 		{
 			
-			long cardNumber; //instantiate - set to other value later - use long for more digits than int
+			//long cardNumber; //instantiate - set to other value later - use long for more digits than int
 			
-			for(int i = 0; i < TextFile.cardList.size(); i++) //credit card by credit card
+			for(int i = 0; i < cardNumber.size; i++) //credit card by credit card
 			{
 				
 				
-				cardNumber = TextFile.cardList.get(i);
-				TextFile.cardList.set(i, cardNumber);
+				//cardNumber = TextFile.cardList.get(i);
+				//TextFile.cardList.set(i, cardNumber);
 				
 				//digit stripping - evaluate individually
 				long temporary = cardNumber; 
