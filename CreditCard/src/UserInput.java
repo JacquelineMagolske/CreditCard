@@ -15,10 +15,7 @@ public class UserInput
 				Long cardNumber = scanner.nextLong();
 				
 				
-				if(doubleAlternates(cardNumber))
-					{
-						
-					}
+				doubleAlternates(cardNumber);
 				
 				
 			}
@@ -28,14 +25,7 @@ public class UserInput
 			
 			//long cardNumber; //instantiate - set to other value later - use long for more digits than int
 			
-			for(int i = 0; i < cardNumber.size; i++) //credit card by credit card
-			{
-				
-				
-				//cardNumber = TextFile.cardList.get(i);
-				//TextFile.cardList.set(i, cardNumber);
-				
-				//digit stripping - evaluate individually
+		
 				long temporary = cardNumber; 
 				int totalDigits = 0;
 			
@@ -75,7 +65,7 @@ public class UserInput
 					}
 					
 				validateCard(cardNumber, total); //separate method for checking
-			}
+			
 			
 		}
 		

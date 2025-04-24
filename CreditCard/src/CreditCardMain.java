@@ -6,12 +6,14 @@ import java.util.Scanner;
 public class CreditCardMain
 	{
 
+		static int counter = 0;
 		
 		public static void main(String[] args) throws IOException
 			{
 			
 				TextFile.readCards();
 				doubleAlternates(); //do the math in here
+				System.out.print("There are " + counter + " valid credit cards");
 				
 				
 			}
@@ -68,6 +70,8 @@ public class CreditCardMain
 					}
 					
 				validateCard(cardNumber, total); //separate method for checking
+				
+				
 			}
 			
 		}
@@ -78,9 +82,11 @@ public class CreditCardMain
 		{
 			
 			
+			
 			if(total % 10 == 0)
 			{
 				System.out.println(cardNumber + " is a potential combination for a credit card");
+				counter++;
 				
 			}
 			
